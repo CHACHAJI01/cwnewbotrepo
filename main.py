@@ -304,7 +304,7 @@ async def account_login(bot: Client, m: Message):
                         os.remove(f"{filename}.jpg")
                         await reply.delete (True)
                     except Exception as e:
-                        await m.reply_text(f"**Video downloading failed ❌**\n{str(e)}")
+                        await m.reply_text(f"**Video downloading failed ❌**\n{str(e)}\n**Link** - `{link}`")
                         continue
             except Exception as e:
                 await m.reply_text(str(e))
