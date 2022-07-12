@@ -35,6 +35,9 @@ from pyrogram import Client, filters
 import time
 from pyrogram.types import User, Message
 from p_bar import progress_bar
+import time
+from bot import botStartTime
+import shutil, psutil
 from subprocess import getstatusoutput
 import logging
 import os
