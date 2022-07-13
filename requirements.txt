@@ -4,3 +4,4 @@ requests
 pyromod
 yt-dlp
 ffmpeg
+psutil
