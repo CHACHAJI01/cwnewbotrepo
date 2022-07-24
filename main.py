@@ -42,12 +42,12 @@ import os
 import re
 
 import requests
-bot = Client(
-    "CW",
-    bot_token=os.environ.get("BOT_TOKEN"),
-    api_id=int(os.environ.get("API_ID")),
-    api_hash=os.environ.get("API_HASH")
-)
+API_ID = int(os.environ.get("API_ID"))
+API_HASH = os.environ.get("API_HASH")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+NAME = os.environ.get("NAME")
+
+bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 logger = logging.getLogger()
 # thumb = os.environ.get("THUMB")
