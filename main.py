@@ -54,15 +54,16 @@ logger = logging.getLogger()
 # if thumb.startswith("http://") or thumb.startswith("https://"):
 #     getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
 #     thumb = "thumb.jpg"
-                                      
+
+
+
 @bot.on_message(filters.command(["start"]))
 async def start(bot, update):
        await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
-                              "**NOW:-** "      
-
-                                 "Press **/login** to continue..\n\n"
-                                  "Bot made by **BlackOuT **" )
-        
+                              "**NOW:-** "
+                                       
+                                       "Press **/login** to continue..\n\n"
+                                     "Bot made by **Ayush Noob **" )
 
 ACCOUNT_ID = "6206459123001"
 BCOV_POLICY = "BCpkADawqM1474MvKwYlMRZNBPoqkJY-UWm7zE1U769d5r5kqTjG0v8L-THXuVZtdIQJpfMPB37L_VJQxTKeNeLO2Eac_yMywEgyV9GjFDQ2LTiT4FEiHhKAUvdbx9ku6fGnQKSMB8J5uIDd"
@@ -120,7 +121,7 @@ async def account_login(bot: Client, m: Message):
     url2 = requests.get("https://elearn.crwilladmin.com/api/v1/comp/batch-topic/"+raw_text2+"?type=class&token="+token)
     topicid = url2.json()["data"]["batch_topic"]
     bn =url2.json()["data"]["batch_detail"]["name"]
-    await m.reply_text(f'Batch details of **{bn}** are :')
+#     await m.reply_text(f'Batch details of **{bn}** are :')
     vj=""
     for data in topicid:
         tids = (data["id"])
@@ -155,7 +156,7 @@ async def account_login(bot: Client, m: Message):
         BBB = f"{'**TOPIC-ID - TOPIC - VIDEOS**'}"
         hh = f"```{tid}```     - **{t_name} - ({zz})**\n"
         
-        hh = f"**Topic -** {t_name}\n**Topic ID - ** ```{tid}```\nno. of videos are : {zz}\n\n"
+#         hh = f"**Topic -** {t_name}\n**Topic ID - ** ```{tid}```\nno. of videos are : {zz}\n\n"
         
         if len(f'{cool1}{hh}')>4096:
             await m.reply_text(hh)
@@ -186,10 +187,10 @@ async def account_login(bot: Client, m: Message):
     input3 = message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     
-     editable9= await m.reply_text(f"Now send the **Topic Names**\n\nSend like this **1&2&3&4** and so on\nor copy paste or edit **below names according to you in Order of ids you entered above** :\n\n**Enter this to download full batch :-**\n```{vp}```")
+#     editable9= await m.reply_text(f"Now send the **Topic Names**\n\nSend like this **1&2&3&4** and so on\nor copy paste or edit **below names according to you in Order of ids you entered above** :\n\n**Enter this to download full batch :-**\n```{vp}```")
     
-     input9 = message = await bot.listen(editable.chat.id)
-     raw_text9 = input9.text
+#     input9 = message = await bot.listen(editable.chat.id)
+#     raw_text9 = input9.text
   
     try:
         xv = raw_text3.split('&')
@@ -210,8 +211,8 @@ async def account_login(bot: Client, m: Message):
             
             vv =ff.json()["data"]["class_list"]["classes"]
             vv.reverse()
-            clan =f"**{vc}**\n\nNo of links found in topic-id {raw_text3} are **{len(vv)}**"
-            await m.reply_text(clan)
+            #clan =f"**{vc}**\n\nNo of links found in topic-id {raw_text3} are **{len(vv)}**"
+            #await m.reply_text(clan)
             count = 1
             try:
                 for data in vv:
@@ -229,14 +230,14 @@ async def account_login(bot: Client, m: Message):
                             video = video_response.json()
                             video_source = video["sources"][5]
                             video_url = video_source["src"]
-                            print(video_url)
+                            #print(video_url)
 
                             surl=requests.get("https://elearn.crwilladmin.com/api/v1/livestreamToken?type=brightcove&vid="+vidid+"&token="+token)
                             stoken = surl.json()["data"]["token"]
-                            print(stoken)
+                            #print(stoken)
 
                             link = video_url+"&bcov_auth="+stoken
-                            print(link)
+                            #print(link)
                         except Exception as e:
                             print(str(e))
                         
