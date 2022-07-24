@@ -120,7 +120,7 @@ async def account_login(bot: Client, m: Message):
     url2 = requests.get("https://elearn.crwilladmin.com/api/v1/comp/batch-topic/"+raw_text2+"?type=class&token="+token)
     topicid = url2.json()["data"]["batch_topic"]
     bn =url2.json()["data"]["batch_detail"]["name"]
-#     await m.reply_text(f'Batch details of **{bn}** are :')
+    await m.reply_text(f'Batch details of **{bn}** are :')
     vj=""
     for data in topicid:
         tids = (data["id"])
