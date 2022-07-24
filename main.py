@@ -41,7 +41,6 @@ import logging
 import os
 import re
 import pyfiglet
-import pyfiglet module
 
 import requests
 bot = Client(
