@@ -58,24 +58,8 @@ logger = logging.getLogger()
 @bot.on_message(filters.command(["start"]))
 async def start(bot, update):
        await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
-                              "**NOW:-** "
-                                                                               
-        GGGGGGGGGGGGG                                       kkkkkkkk           
-     GGG::::::::::::G                                       k::::::k           
-   GG:::::::::::::::G                                       k::::::k           
-  G:::::GGGGGGGG::::G                                       k::::::k           
- G:::::G       GGGGGG    eeeeeeeeeeee        eeeeeeeeeeee    k:::::k    kkkkkkk
-G:::::G                ee::::::::::::ee    ee::::::::::::ee  k:::::k   k:::::k 
-G:::::G               e::::::eeeee:::::ee e::::::eeeee:::::eek:::::k  k:::::k  
-G:::::G    GGGGGGGGGGe::::::e     e:::::ee::::::e     e:::::ek:::::k k:::::k   
-G:::::G    G::::::::Ge:::::::eeeee::::::ee:::::::eeeee::::::ek::::::k:::::k    
-G:::::G    GGGGG::::Ge:::::::::::::::::e e:::::::::::::::::e k:::::::::::k     
-G:::::G        G::::Ge::::::eeeeeeeeeee  e::::::eeeeeeeeeee  k:::::::::::k     
- G:::::G       G::::Ge:::::::e           e:::::::e           k::::::k:::::k    
-  G:::::GGGGGGGG::::Ge::::::::e          e::::::::e         k::::::k k:::::k   
-   GG:::::::::::::::G e::::::::eeeeeeee   e::::::::eeeeeeee k::::::k  k:::::k  
-     GGG::::::GGG:::G  ee:::::::::::::e    ee:::::::::::::e k::::::k   k:::::k 
-        GGGGGG   GGGG    eeeeeeeeeeeeee      eeeeeeeeeeeeee kkkkkkkk    kkkkkkk  
+                              "**NOW:-** "      
+
                                  "Press **/login** to continue..\n\n"
                                   "Bot made by **BlackOuT **" )
         
@@ -226,8 +210,8 @@ async def account_login(bot: Client, m: Message):
             
             vv =ff.json()["data"]["class_list"]["classes"]
             vv.reverse()
-            #clan =f"**{vc}**\n\nNo of links found in topic-id {raw_text3} are **{len(vv)}**"
-            #await m.reply_text(clan)
+            clan =f"**{vc}**\n\nNo of links found in topic-id {raw_text3} are **{len(vv)}**"
+            await m.reply_text(clan)
             count = 1
             try:
                 for data in vv:
@@ -245,14 +229,14 @@ async def account_login(bot: Client, m: Message):
                             video = video_response.json()
                             video_source = video["sources"][5]
                             video_url = video_source["src"]
-                            #print(video_url)
+                            print(video_url)
 
                             surl=requests.get("https://elearn.crwilladmin.com/api/v1/livestreamToken?type=brightcove&vid="+vidid+"&token="+token)
                             stoken = surl.json()["data"]["token"]
-                            #print(stoken)
+                            print(stoken)
 
                             link = video_url+"&bcov_auth="+stoken
-                            #print(link)
+                            print(link)
                         except Exception as e:
                             print(str(e))
                         
