@@ -155,7 +155,7 @@ async def account_login(bot: Client, m: Message):
         BBB = f"{'**TOPIC-ID - TOPIC - VIDEOS**'}"
         hh = f"```{tid}```     - **{t_name} - ({zz})**\n"
         
-#         hh = f"**Topic -** {t_name}\n**Topic ID - ** ```{tid}```\nno. of videos are : {zz}\n\n"
+        hh = f"**Topic -** {t_name}\n**Topic ID - ** ```{tid}```\nno. of videos are : {zz}\n\n"
         
         if len(f'{cool1}{hh}')>4096:
             await m.reply_text(hh)
@@ -186,10 +186,10 @@ async def account_login(bot: Client, m: Message):
     input3 = message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     
-#     editable9= await m.reply_text(f"Now send the **Topic Names**\n\nSend like this **1&2&3&4** and so on\nor copy paste or edit **below names according to you in Order of ids you entered above** :\n\n**Enter this to download full batch :-**\n```{vp}```")
+     editable9= await m.reply_text(f"Now send the **Topic Names**\n\nSend like this **1&2&3&4** and so on\nor copy paste or edit **below names according to you in Order of ids you entered above** :\n\n**Enter this to download full batch :-**\n```{vp}```")
     
-#     input9 = message = await bot.listen(editable.chat.id)
-#     raw_text9 = input9.text
+     input9 = message = await bot.listen(editable.chat.id)
+     raw_text9 = input9.text
   
     try:
         xv = raw_text3.split('&')
