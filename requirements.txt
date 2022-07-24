@@ -31,3 +31,6 @@ tgCrypto
 urllib3
 yt-dlp
 heroku3
+requests
+ffmpeg
+psutil
