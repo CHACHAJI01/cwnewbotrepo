@@ -40,7 +40,6 @@ from subprocess import getstatusoutput
 import logging
 import os
 import re
-import pyfiglet
 
 import requests
 bot = Client(
@@ -55,16 +54,28 @@ logger = logging.getLogger()
 # if thumb.startswith("http://") or thumb.startswith("https://"):
 #     getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
 #     thumb = "thumb.jpg"
-
-    result = pyfiglet.figlet_format("BlackOuT", font = "doh" )
-
                                       
 @bot.on_message(filters.command(["start"]))
 async def start(bot, update):
-       await update.reply_text(print(result))
        await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
                               "**NOW:-** "
-
+                                                                               
+        GGGGGGGGGGGGG                                       kkkkkkkk           
+     GGG::::::::::::G                                       k::::::k           
+   GG:::::::::::::::G                                       k::::::k           
+  G:::::GGGGGGGG::::G                                       k::::::k           
+ G:::::G       GGGGGG    eeeeeeeeeeee        eeeeeeeeeeee    k:::::k    kkkkkkk
+G:::::G                ee::::::::::::ee    ee::::::::::::ee  k:::::k   k:::::k 
+G:::::G               e::::::eeeee:::::ee e::::::eeeee:::::eek:::::k  k:::::k  
+G:::::G    GGGGGGGGGGe::::::e     e:::::ee::::::e     e:::::ek:::::k k:::::k   
+G:::::G    G::::::::Ge:::::::eeeee::::::ee:::::::eeeee::::::ek::::::k:::::k    
+G:::::G    GGGGG::::Ge:::::::::::::::::e e:::::::::::::::::e k:::::::::::k     
+G:::::G        G::::Ge::::::eeeeeeeeeee  e::::::eeeeeeeeeee  k:::::::::::k     
+ G:::::G       G::::Ge:::::::e           e:::::::e           k::::::k:::::k    
+  G:::::GGGGGGGG::::Ge::::::::e          e::::::::e         k::::::k k:::::k   
+   GG:::::::::::::::G e::::::::eeeeeeee   e::::::::eeeeeeee k::::::k  k:::::k  
+     GGG::::::GGG:::G  ee:::::::::::::e    ee:::::::::::::e k::::::k   k:::::k 
+        GGGGGG   GGGG    eeeeeeeeeeeeee      eeeeeeeeeeeeee kkkkkkkk    kkkkkkk  
                                  "Press **/login** to continue..\n\n"
                                   "Bot made by **BlackOuT **" )
         
