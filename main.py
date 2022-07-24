@@ -74,11 +74,6 @@ async def start(bot, update):
             ─████████████████─██████████████─██████──██████─██████████████─██████──████████─────────────██████████████─██████████████─────██████─────
             ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
          ''')
-       await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
-                              "**NOW:-** "
-                                       
-                                       "Press **/login** to continue..\n\n"
-                                     "Bot made by ** BlackOuT **" )
 
 ACCOUNT_ID = "6206459123001"
 BCOV_POLICY = "BCpkADawqM1VmXspFMod94-pT7xDCvmBEYt8U7f0mRB6XnG5huPE7I9qjhDW0qpx3LRyTD9WX7W6JvUGtgKN-qf1pJoZO-QXBMIykDivtAOgkJOmN-kyv4m_F0thrJ45z95hqWON0nsKBwvd"
