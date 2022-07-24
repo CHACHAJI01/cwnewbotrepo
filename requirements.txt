@@ -34,3 +34,9 @@ heroku3
 requests
 ffmpeg
 psutil
+mutagen
+pyaes==1.6.1
+pycryptodome
+Pyrogram
+PySocks==1.7.1
+soupsieve
