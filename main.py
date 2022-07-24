@@ -49,7 +49,6 @@ bot = Client(
     api_hash=os.environ.get("API_HASH")
 )
 
-
 logger = logging.getLogger()
 # thumb = os.environ.get("THUMB")
 # if thumb.startswith("http://") or thumb.startswith("https://"):
