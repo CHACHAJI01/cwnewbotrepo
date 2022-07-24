@@ -41,7 +41,7 @@ import logging
 import os
 import re
 import pyfiglet
-
+import pyfiglet module
 
 import requests
 bot = Client(
@@ -57,20 +57,18 @@ logger = logging.getLogger()
 #     getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
 #     thumb = "thumb.jpg"
 
+    result = pyfiglet.figlet_format("BlackOuT", font = "doh" )
 
-
+                                      
 @bot.on_message(filters.command(["start"]))
 async def start(bot, update):
+       await update.reply_text(print(result))
        await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
                               "**NOW:-** "
-                               # import pyfiglet module
-                        
-                                result = pyfiglet.figlet_format("Geeks", font = "doh" )
-                                print(result)
 
-                                       
                                  "Press **/login** to continue..\n\n"
                                   "Bot made by **BlackOuT **" )
+        
 
 ACCOUNT_ID = "6206459123001"
 BCOV_POLICY = "BCpkADawqM1474MvKwYlMRZNBPoqkJY-UWm7zE1U769d5r5kqTjG0v8L-THXuVZtdIQJpfMPB37L_VJQxTKeNeLO2Eac_yMywEgyV9GjFDQ2LTiT4FEiHhKAUvdbx9ku6fGnQKSMB8J5uIDd"
